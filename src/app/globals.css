@@ -111,9 +111,8 @@ body {
 }
 
 .position-img3 {
-  display: block;
   position: absolute;
-  right: -4rem;
+  right: 1rem;
   bottom: -5rem;
   transform: rotate(81deg);
 }
