@@ -11,17 +11,6 @@ import Link from "next/link";
 import { decoration } from "../../../public/variables";
 import { motion } from "framer-motion";
 
-import { Gowun_Dodum, Mali } from "next/font/google";
-const textTitle = Gowun_Dodum({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
-const textFont = Mali({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
 const HomePage = () => {
     const dispatch: AppDispatch = useDispatch();
     const { data } = useSelector((state: RootState) => state.data);
@@ -54,12 +43,12 @@ const HomePage = () => {
           <div className="flex flex-col sm:gap-10 gap-5">
             <h1
               className={`text-5xl md:text-[4rem] 
-              leading-none lg:text-7xl font-bold text-gray-900 text-center ${textTitle.className} `}
+              leading-none lg:text-7xl font-bold text-gray-900 text-center font-gowun `}
             >
               We provide the best food for you
             </h1>
             <p
-              className={`text-gray-600 text-xl sm:text-2xl text-center ${textFont.className}`}
+              className={`text-gray-600 text-xl sm:text-2xl text-center font-mali`}
             >
               Come experience a unique gastronomic journey! Flavor, quality, and
               the service you deserve. We&apos;re waiting for you!

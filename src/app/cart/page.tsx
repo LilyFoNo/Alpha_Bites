@@ -11,18 +11,11 @@ import {
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { PiMaskSadLight } from "react-icons/pi";
-import { Mali } from "next/font/google";
 import { LuBadgePlus } from "react-icons/lu";
 import { IoTrashOutline } from "react-icons/io5";
 import { FaCirclePlus } from "react-icons/fa6";
 import { FaMinusCircle } from "react-icons/fa";
 import { motion } from "framer-motion";
-
-const textFont = Mali({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
 
 export default function Cart() {
   const dispatch = useDispatch();
@@ -87,7 +80,7 @@ export default function Cart() {
           />
         </div>
         <div
-          className={` py-8 ${textFont.className} flex flex-col items-center justify-center`}
+          className={` py-8 font-mali flex flex-col items-center justify-center`}
         >
           <h1
             className={`my-5 md:text-6xl text-5xl text-orange-800 border-b-2 border-orange-800 pb-5 text-center`}

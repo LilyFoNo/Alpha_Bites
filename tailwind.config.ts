@@ -12,6 +12,13 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        delicious: ['Delicious_Handrawn', 'sans-serif'],
+        ephesis: ['Ephesis', 'sans-serif'],
+        gowun: ['Gowun_Dodum', 'sans-serif'],
+        mali: ['Mali', 'sans-serif'],
+        tomorrow: ['Tomorrow', 'sans-serif'],
+      },
     },
   },
   plugins: [],

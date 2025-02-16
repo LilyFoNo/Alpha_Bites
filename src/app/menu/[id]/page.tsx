@@ -16,17 +16,6 @@ import { BsBasket2 } from "react-icons/bs";
 import { addToCart } from "../../context/slices/CartSlice";
 import { CartItem } from "../../types/SliceTypes";
 import CartAnimation from "../../components/CartAnimation";
-import { Tomorrow, Mali } from "next/font/google";
-const textTitle = Tomorrow({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
-const textFont = Mali({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
 
 const DetailsPage = () => {
   const { id } = useParams();
@@ -81,7 +70,7 @@ const DetailsPage = () => {
         <div className="img-info grid lg:grid-cols-2 grid-cols-1">
           <div className="w-full h-full mb-5 flex flex-col items-center justify-center ">
             <h1
-              className={`lg:hidden md:text-5xl text-3xl font-bold ${textTitle.className} text-center text-orange-900 mb-5`}
+              className={`lg:hidden md:text-5xl text-3xl font-bold font-tomorrow text-center text-orange-900 mb-5`}
             >
               {item.fields.name}
             </h1>
@@ -96,7 +85,7 @@ const DetailsPage = () => {
           </div>
           <div className="details">
             <h1
-              className={`md:text-5xl hidden lg:block mb-8 font-bold text-center ${textTitle.className} text-orange-800`}
+              className={`md:text-5xl hidden lg:block mb-8 font-bold text-center font-tomorrow text-orange-800`}
             >
               {item.fields.name}
             </h1>
@@ -121,7 +110,7 @@ const DetailsPage = () => {
             </p>
             <div className="flex items-center justify-center gap-10">
               <p
-                className={`md:text-2xl text-lg text-gray-800  ${textTitle.className}`}
+                className={`md:text-2xl text-lg text-gray-800  font-tomorrow`}
               >
                 Price:&nbsp;
                 <span className="text-orange-600 font-bold">
@@ -137,7 +126,7 @@ const DetailsPage = () => {
 
             <div className="reviews mt-6">
               <h2
-                className={`text-2xl md:text-3xl text-center font-semibold mb-4 ${textTitle.className} text-orange-800`}
+                className={`text-2xl md:text-3xl text-center font-semibold mb-4 font-tomorrow text-orange-800`}
               >
                 Reviews
               </h2>
@@ -159,17 +148,17 @@ const DetailsPage = () => {
                     <SwiperSlide key={index}>
                       <div className="bg-white shadow-lg p-6 rounded-lg text-center w-full mx-auto h-auto flex flex-col justify-between overflow-hidden">
                         <h3
-                          className={`text-xl sm:text-2xl font-semibold text mb-2 text-orange-600 ${textTitle.className}`}
+                          className={`text-xl sm:text-2xl font-semibold text mb-2 text-orange-600 font-tomorrow`}
                         >
                           {review.fields.title}
                         </h3>
                         <p
-                          className={`text-gray-700 ${textFont.className} sm:text-xl`}
+                          className={`text-gray-700 font-mali sm:text-xl`}
                         >
                           {review.fields.comment}
                         </p>
                         <p
-                          className={`text-sm sm:text-xl text-gray-500 mt-2 italic mb-1 ${textFont.className}`}
+                          className={`text-sm sm:text-xl text-gray-500 mt-2 italic mb-1 font-mali`}
                         >
                           {new Date(review.fields.date).toLocaleDateString()}
                         </p>

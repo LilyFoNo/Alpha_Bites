@@ -5,19 +5,7 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import Image from "next/image";
 import { fetchData } from "../context/slices/DataSlice";
-
-import { Gowun_Dodum, Mali } from "next/font/google";
 import CTA from "./CTA";
-const textFont = Mali({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
-const textTitle = Gowun_Dodum({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
 
 const RandomDishes = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -39,7 +27,7 @@ const RandomDishes = () => {
       <div className="mainContainer flex flex-col items-center justify-center mt-2 gap-10 sm:gap-16 p-8">
         <div className="flex items-center gap-5">
           <h3
-            className={`${textFont.className} text-3xl sm:text-5xl text-center`}
+            className={`font-mali text-3xl sm:text-5xl text-center`}
           >
             Our Special Dishes
           </h3>
@@ -57,7 +45,7 @@ const RandomDishes = () => {
                   className="w-[12rem] sm:w-[15rem] h-[10rem] relative"
                 >
                   <h4
-                    className={`${textTitle.className} text-2xl sm:text-3xl text-gray-500 text-center`}
+                    className={`font-gowun text-2xl sm:text-3xl text-gray-500 text-center`}
                   >
                     {name}
                   </h4>
@@ -69,7 +57,7 @@ const RandomDishes = () => {
                       className="rounded-full ml-10 border border-[#444242] imgRa"
                     />
                     <p
-                      className={`${textFont.className} priceRa text-xl rounded-full bg-[#E3DAC9] w-16 h-16 text-center pt-3 z-50 border border-[#565554]`}
+                      className={`font-mali priceRa text-xl rounded-full bg-[#E3DAC9] w-16 h-16 text-center pt-3 z-50 border border-[#565554]`}
                     >
                       ${price}
                     </p>

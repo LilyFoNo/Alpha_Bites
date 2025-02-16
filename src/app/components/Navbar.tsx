@@ -10,19 +10,6 @@ import { GiExitDoor } from "react-icons/gi";
 import { BsBasket2Fill } from "react-icons/bs";
 import Image from "next/image";
 
-import { Ephesis, Tomorrow } from "next/font/google";
-const textTitle = Ephesis({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
-
-const textNav = Tomorrow({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
-
 const navLinks = [
   { name: "Home", href: "/", protectedUrl: false },
   { name: "Menu", href: "/menu", protectedUrl: true },
@@ -56,7 +43,7 @@ function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <Link
             href="/"
-            className={`text-shadow flex items-center text-[2.5rem] sm:text-5xl font-bold ${textTitle.className} sm:gap-4`}
+            className={`text-shadow flex items-center text-[2.5rem] sm:text-5xl font-bold font-ephesis sm:gap-4`}
           >
             <Image
               src={"/logo.png"}
@@ -71,9 +58,7 @@ function Navbar() {
             {navLinks.map((link) => (
               <button
                 key={link.href}
-                className={`hover:text-[#ea6d27] transition-colors ${
-                  textNav.className
-                } ${pathname === link.href ? "text-orange-400 text-lg" : ""}`}
+                className={`hover:text-[#ea6d27] transition-colors font-tomorrow ${pathname === link.href ? "text-orange-400 text-lg" : ""}`}
                 onClick={() => handleLinkClick(link.href, link.protectedUrl)}
               >
                 {link.name}
@@ -112,9 +97,7 @@ function Navbar() {
       </div>
 
       <div
-        className={`md:hidden bg-[#d5d7d8] flex flex-col items-center gap-2 transition-all duration-300 ease-in-out transform ${
-          textNav.className
-        } ${
+        className={`md:hidden bg-[#d5d7d8] flex flex-col items-center gap-2 transition-all duration-300 ease-in-out transform font-tomorrow ${
           isOpen
             ? "max-h-screen opacity-100 translate-y-0 pb-3"
             : "max-h-0 opacity-0 translate-y-5"

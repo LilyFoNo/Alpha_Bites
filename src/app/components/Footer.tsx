@@ -5,18 +5,6 @@ import { menu_list } from "../../../public/variables";
 import { useClerk } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Ephesis, Mali } from "next/font/google";
-
-const textFont = Mali({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
-const textTitle = Ephesis({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
 
 const Footer = () => {
   const { user } = useClerk();
@@ -30,11 +18,11 @@ const Footer = () => {
   };
   return (
     <>
-      <div className={`${textFont.className} bg-white lg:pt-20 pt-16 px-10 pb-5`}>
+      <div className={`font-mali bg-white lg:pt-20 pt-16 px-10 pb-5`}>
         <div className="flex gap-2 items-center">
           <Image src={"/logo.png"} alt="logo" width={50} height={50} />
           <h1
-            className={`${textTitle.className} text-shadow text-3xl text-orange-800`}
+            className={`font-ephesis text-shadow text-3xl text-orange-800`}
           >
             Alpha Bites
           </h1>

@@ -1,16 +1,9 @@
 "use client";
 import Image from "next/image";
-import { Tomorrow } from "next/font/google";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { clearCart } from "../context/slices/CartSlice";
-
-const textFont = Tomorrow({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
 
 export default function Success() {
   const dispatch = useDispatch()
@@ -20,7 +13,7 @@ export default function Success() {
   return (
     <>
       <div
-        className={`${textFont.className} flex flex-col xl:gap-60 sm:gap-20 gap:10 xl:px-36 p-10 relative`}
+        className={`font-tomorrow flex flex-col xl:gap-60 sm:gap-20 gap:10 xl:px-36 p-10 relative`}
       >
         <div className="absolute -left-5 md:top-5">
           <Image

@@ -13,18 +13,7 @@ import Filters from "../components/Filters";
 import { getIngredientColor } from "../components/Ingredients";
 import { motion } from "framer-motion";
 import { PiMaskSadLight } from "react-icons/pi";
-import { Tomorrow, Mali } from "next/font/google";
 import { IoMdCloseCircle } from "react-icons/io";
-const textTitle = Tomorrow({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
-const textFont = Mali({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
 
 export default function Menu() {
   const dispatch: AppDispatch = useDispatch();
@@ -115,7 +104,7 @@ export default function Menu() {
           />
         </div>
         <h1
-          className={`my-5 md:text-6xl text-5xl ${textFont.className} text-orange-800 border-b-2 border-orange-800 pb-5 text-center`}
+          className={`my-5 md:text-6xl text-5xl font-mali text-orange-800 border-b-2 border-orange-800 pb-5 text-center`}
         >
           Our Special Dishes
         </h1>
@@ -143,7 +132,7 @@ export default function Menu() {
           </div>
         ) : (
           <div
-            className={`ContainerMenu grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full max-w-6xl mx-auto py-8 ${textTitle.className}`}
+            className={`ContainerMenu grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full max-w-6xl mx-auto py-8 font-tomorrow`}
           >
             {data.length > 0 ? (
               data.map((entry: DataItem) => {
@@ -259,7 +248,7 @@ export default function Menu() {
                   className="cursor-pointer text-[#693618] hover:text-[#ea6d27] self-end"
                 />
                 <h1
-                  className={`text-3xl font-bold modal-name ${textTitle.className} text-orange-900`}
+                  className={`text-3xl font-bold modal-name font-tomorrow text-orange-900`}
                 >
                   {selectedItem.name}
                 </h1>
@@ -270,7 +259,7 @@ export default function Menu() {
                   height={100}
                   className="lg:w-64 lg:h-64 md:w-40 md:h-40 object-cover modal-img border border-gray-800 rounded-xlgi"
                 />
-                <p className={`sm:text-xl text-lg ${textFont.className}`}>
+                <p className={`sm:text-xl text-lg font-mali`}>
                   Price:
                   <span className="text-orange-600 ">
                     ${selectedItem.price.toFixed(2)}
@@ -294,7 +283,7 @@ export default function Menu() {
 
                 <div className="modal-ingredients-container border-t border-t-gray-400 border-b border-b-gray-400 py-2">
                   <p
-                    className={`text-md text-orange-700 ${textFont.className}`}
+                    className={`text-md text-orange-700 font-mali`}
                   >
                     Ingredients
                   </p>

@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Delicious_Handrawn";
+  src: url("/fonts/Delicious_Handrawn/DeliciousHandrawn-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ephesis";
+  src: url("/fonts/Ephesis/Ephesis-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gowun_Dodum";
+  src: url("/fonts/Gowun_Dodum/GowunDodum-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mali";
+  src: url("/fonts/Mali/Mali-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tomorrow";
+  src: url("/fonts/Tomorrow/Tomorrow.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
   --background: #171717;
   --foreground: #fff6ec;
