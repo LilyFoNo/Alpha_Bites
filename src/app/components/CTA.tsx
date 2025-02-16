@@ -12,7 +12,6 @@ interface ICTA {
 const CTA = ({ text, icon }: ICTA) => {
   const router = useRouter();
   const { user } = useClerk();
-
   const handleOnClick = () => {
     if (!user) {
       router.push("/sign-in");

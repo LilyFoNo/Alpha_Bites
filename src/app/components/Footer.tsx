@@ -21,9 +21,7 @@ const Footer = () => {
       <div className={`font-mali bg-white lg:pt-20 pt-16 px-10 pb-5`}>
         <div className="flex gap-2 items-center">
           <Image src={"/logo.png"} alt="logo" width={50} height={50} />
-          <h1
-            className={`font-ephesis text-shadow text-3xl text-orange-800`}
-          >
+          <h1 className={`font-ephesis text-shadow text-3xl text-orange-800`}>
             Alpha Bites
           </h1>
         </div>

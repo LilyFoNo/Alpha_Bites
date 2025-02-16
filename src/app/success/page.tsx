@@ -6,10 +6,10 @@ import { useDispatch } from "react-redux";
 import { clearCart } from "../context/slices/CartSlice";
 
 export default function Success() {
-  const dispatch = useDispatch()
-  useEffect (()=>{
-    dispatch(clearCart())
-  },[dispatch])
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(clearCart());
+  }, [dispatch]);
   return (
     <>
       <div

@@ -15,8 +15,7 @@ export interface DataItem {
     rating: number;
     ingredients?: { fields: { name: string } }[];
     comments?: { fields: { comment: string } }[];
-  }
-  
+  };
 }
 
 export interface DataState {

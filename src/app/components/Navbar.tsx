@@ -1,6 +1,5 @@
 "use client";
 import { SignedIn, SignedOut, useClerk } from "@clerk/nextjs";
-
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -58,7 +57,9 @@ function Navbar() {
             {navLinks.map((link) => (
               <button
                 key={link.href}
-                className={`hover:text-[#ea6d27] transition-colors font-tomorrow ${pathname === link.href ? "text-orange-400 text-lg" : ""}`}
+                className={`hover:text-[#ea6d27] transition-colors font-tomorrow ${
+                  pathname === link.href ? "text-orange-400 text-lg" : ""
+                }`}
                 onClick={() => handleLinkClick(link.href, link.protectedUrl)}
               >
                 {link.name}

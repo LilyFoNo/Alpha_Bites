@@ -109,9 +109,7 @@ const DetailsPage = () => {
               {item.fields.description}
             </p>
             <div className="flex items-center justify-center gap-10">
-              <p
-                className={`md:text-2xl text-lg text-gray-800  font-tomorrow`}
-              >
+              <p className={`md:text-2xl text-lg text-gray-800  font-tomorrow`}>
                 Price:&nbsp;
                 <span className="text-orange-600 font-bold">
                   ${item.fields.price.toFixed(2)}
@@ -152,9 +150,7 @@ const DetailsPage = () => {
                         >
                           {review.fields.title}
                         </h3>
-                        <p
-                          className={`text-gray-700 font-mali sm:text-xl`}
-                        >
+                        <p className={`text-gray-700 font-mali sm:text-xl`}>
                           {review.fields.comment}
                         </p>
                         <p
@@ -167,7 +163,9 @@ const DetailsPage = () => {
                   ))}
                 </Swiper>
               ) : (
-                <p className="text-center text-gray-500 text-xl">No reviews yet.</p>
+                <p className="text-center text-gray-500 text-xl">
+                  No reviews yet.
+                </p>
               )}
             </div>
           </div>

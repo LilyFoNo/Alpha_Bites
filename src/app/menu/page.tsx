@@ -19,12 +19,9 @@ export default function Menu() {
   const dispatch: AppDispatch = useDispatch();
   const [selectedItem, setSelectedItem] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { data } = useSelector(
-    (state: RootState) => state.data as DataState
-  );
+  const { data } = useSelector((state: RootState) => state.data as DataState);
   const [filter, setFilter] = useState<string>("All");
   const [isLoading, setIsLoading] = useState(true);
-
   const [showAnimation, setShowAnimation] = useState<boolean>(false);
 
   useEffect(() => {
@@ -282,9 +279,7 @@ export default function Menu() {
                 </div>
 
                 <div className="modal-ingredients-container border-t border-t-gray-400 border-b border-b-gray-400 py-2">
-                  <p
-                    className={`text-md text-orange-700 font-mali`}
-                  >
+                  <p className={`text-md text-orange-700 font-mali`}>
                     Ingredients
                   </p>
                   <div className="mt-4 flex modal-ingredients flex-wrap gap-2 justify-center">

@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "Delicious_Handrawn";
-  src: url("/fonts/Delicious_Handrawn/DeliciousHandrawn-Regular.ttf") format("truetype");
+  src: url("/fonts/Delicious_Handrawn/DeliciousHandrawn-Regular.ttf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -32,7 +33,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 
 :root {
   --background: #171717;
@@ -163,12 +163,12 @@ body {
     bottom: -2.7rem;
   }
 }
- 
+
 @media only screen and (max-width: 780px) {
   #food {
     animation: food 5s linear infinite;
   }
-  
+
   #delivery {
     animation: delivery 5s linear infinite;
   }

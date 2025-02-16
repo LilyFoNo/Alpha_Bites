@@ -2,22 +2,17 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 import { DataState } from "@/app/types/SliceTypes";
 
-
-
 const initialState: DataState = {
   data: [],
   loading: false,
   error: null,
 };
 
-export const fetchData = createAsyncThunk(
-  "api/fetchData",
-  async () => {
-    const response = await fetch('api/fetchData')
-    const data = await response.json()
-    return data;
-  }
-);
+export const fetchData = createAsyncThunk("api/fetchData", async () => {
+  const response = await fetch("api/fetchData");
+  const data = await response.json();
+  return data;
+});
 
 const DataSlice = createSlice({
   name: "menu",

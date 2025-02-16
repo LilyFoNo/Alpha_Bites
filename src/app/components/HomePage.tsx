@@ -12,17 +12,16 @@ import { decoration } from "../../../public/variables";
 import { motion } from "framer-motion";
 
 const HomePage = () => {
-    const dispatch: AppDispatch = useDispatch();
-    const { data } = useSelector((state: RootState) => state.data);
-  
-    useEffect(() => {
-      if (!data.length) {
-        dispatch(fetchData());
-      }
-    }, [dispatch, data.length]);
-    return (
-        <>
-              <div className="relative min-h-screen px-8 sm:py-12 p:8 flex items-center justify-center bg-[#f3f4f4]">
+  const dispatch: AppDispatch = useDispatch();
+  const { data } = useSelector((state: RootState) => state.data);
+  useEffect(() => {
+    if (!data.length) {
+      dispatch(fetchData());
+    }
+  }, [dispatch, data.length]);
+  return (
+    <>
+      <div className="relative min-h-screen px-8 sm:py-12 p:8 flex items-center justify-center bg-[#f3f4f4]">
         <div className="hidden lg:block absolute xl:top-10 top-4 left-10">
           <motion.div
             animate={{ rotate: 360 }}
@@ -106,8 +105,8 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-        </>
-    )
-}
+    </>
+  );
+};
 
-export default HomePage
+export default HomePage;
